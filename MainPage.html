@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel = "stylesheet" type="text/css" href="css/main.css">
+      <style>
+        #image {
+                opacity: 0%;
+            }
+
+        #butonul{
+            display: none;
+        }
+
+        input{
+                display: inline;
+                
+            }
+        header, footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+        }
+
+        .board{
+            border-radius: 0.5em;
+            padding-left: 0.3em;
+        }
+
+        form{
+            border:solid #d8b00ffe;
+            border-style: dotted;
+        }
+
+        *{padding: 0;
+            margin: 0;}
+
+        header{
+            font-size: 32; top: 0;
+        }
+
+        footer{
+            bottom:0;
+            text-align: center;}
+
+        div{
+            position: absolute; 
+            top: 200px;
+            border: solid black;
+            background-color: #ffcc00;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;}
+
+        label{
+            display: block;}
+
+        .logo1{
+            width: 60px;
+            display: inline-block;
+        }
+        h2{display: inline; }
+
+        .fuberbutton{
+            color: #fff;
+        }
+        .fuberbutton:link { text-decoration: none; }
+        .fuberbutton:visited { text-decoration: none; }
+        .fuberbutton:hover { text-decoration: none; }
+        .fuberbutton:active { text-decoration: none; }
+        #discon{position: absolute;
+            right:0;
+            padding-top: 32px;
+            padding-right: 10px;}
+
+        .t1{
+            background-color: #555555;
+            border-radius: 0.5em;
+            color: white;  
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .t1:hover{font-weight: bold;}
+
+        </style>
+    </head>
+    <body>
+        <header>
+            
+            <a href="MainPage.html"><img class="logo1" src="logo.png" alt="logo"></a>
+             
+            <a class="fuberbutton" href="MainPage.html"><h2>Fuber</h2></a>
+            <a class="fuberbutton" id="discon" href="index.html"><h2>Disconnect</h2></a>
+            <br>
+        </header>
+
+        <div class="container">
+        <h1>CHOOSE YOUR ROUTE</h1>
+       
+            
+            <p>Starting location:</p>
+            <input class="board" type="text" placeholder="Enter starting location">
+            <p>Final destination:</p>
+            <input class="board" type="text" placeholder="Enter final destination">
+        
+        <br>
+        <br>
+        
+        
+
+        <button class="t1" type="button" 
+            onclick="show()" id="btnID"> Show route</button>
+
+        <a id="butonul"  href="Routes.html">
+            <button class="t1">Find available transport</button>
+        </a>    
+            
+        <div>
+            <img id="image" src="eindelft.png" height="300" alt="GFG image">
+       </div>
+    
+        <br>
+        <br>
+        
+        
+
+        </div>
+        <footer>
+        
+            <h5>Copyright &copy; 2023 The Non-Existent Company.
+                <br>Contact: + 4123 456 7890
+            </h5>
+            
+        </footer>
+
+
+
+
+
+        
+        <script>
+            function show()
+            {   
+                 document.getElementById('image')
+                    .style.opacity = "100%";
+                document.getElementById('btnID')
+                    .style.display = "none";
+                document.getElementById('butonul') 
+                    .style.display = "block";
+            }
+        </script>
+    </body>
+</html>
